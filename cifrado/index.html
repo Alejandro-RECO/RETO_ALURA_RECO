@@ -1,0 +1,58 @@
+<!--Referencia: https://elhombrepan.github.io/Encriptador/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- JavaSpript -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="main.js">
+    <title>Encriptador</title>
+</head>
+<header class="header">
+    <h1><img class="header__logo" src="./assets/img/vector.svg" alt="">Encritador</h1>
+</header> 
+<body>
+    <section class="container">
+        <article class="text">
+            <form onreset="mosOculDiv()">
+                <textarea class="text__textarea"placeholder="Ingrese el texto que desea encriptar aquí" name="texto" id="texPrincipal" minlength="1" autofocus oninput="mosOculDiv()"></textarea>
+                <br>
+                <label for="encriptar">Solo letras minusculas y sin acento</label>
+                <br>
+                <input class="text__button" type="button" value="Encriptar" id="encriptar" name="Encriptar"  onclick="ejecutar()">
+                <input class="text__button" type="button" value="Desencriptar" id="desencriptar" name="Desencriptar" onclick="ejecutarDesencriptado()">
+                <input class="boton" type="button" value="Pegar" id="pegar">
+                <input class="text__button" type="reset" onclick="brTextareados()">
+            </form>
+        </article>
+        <article class="info" id="pasivo">
+            <img src="./assets/img/persona.svg" alt="Imagen de prueva">
+            <h3>Ningun mensaje fue encontrado</h3>
+            <p>Ingrese el texto que desea encriptar o desencriptar</p>
+        </article>
+        <article class="text-cod" id="activo" style="display: none;">
+            <form>
+                <textarea class="text-cod__modificado" id="textEncriptado" disabled ></textarea>
+                <br>
+                <label for="copiar">Usa el botón para copiar tu texto</label>
+                <br>
+                <input class="text-cod__button-copy" type="button" name="copy" id="copiar" value="copiar" onclick="copyText()">
+            </form>
+        </article>
+        <div class="notificacion" id="notificacion">
+            <span class="mensaje"></span>
+            <button class="cerrar" id="cerrar">X</button>
+            <br><progress></progress>
+        </div>
+    </section>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

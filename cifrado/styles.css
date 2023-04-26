@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root{
+    --letters: rgb(238, 243, 243);
+    --buttons: rgb(10, 56, 113);
+}
+@keyframes subir {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+    background: linear-gradient(to right, #080936, #484449);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.header{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 48px;
+    padding-bottom: 30px;
+    color: rgb(238, 243, 243);
+}
+.header__logo{
+    max-width: 100%;
+    vertical-align: middle;
+    padding-right: 20px;
+}
+.header h1:hover{
+    cursor: pointer;
+    animation: subir 1.5s infinite;
+}
+.container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    justify-content: center;
+    padding-left: 60px;
+}
+.text{
+    flex-basis: 40%;
+}
+.text__textarea{
+    background: fixed;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    resize: none;
+    width: 67%;
+    height: 460px;
+}
+.text__textarea:focus{
+    outline: none;
+}
+.text__textarea::placeholder{
+    color: var(--letters);
+    font-size: 20px;
+}
+.info{
+    color: var(--letters);
+    font-size: 20px;
+    background: fixed;
+    border-radius: 8px;
+    text-align: center;
+    flex-basis: 40%;
+    width: 100%;
+    height: 460px;
+}
+.text-cod{
+    background: fixed;
+    color: var(--letters);
+    border: none;
+    font-size: 20px;
+    resize: none;
+    width: 100%;
+    height: 460px;
+}
+.text-cod:focus{
+    outline: none;
+}
+label{
+    color: var(--letters);
+    font-size: 17px;
+}
+.text__button{
+    text-align: center;
+    width: 30%;
+    background: linear-gradient(to right, #242629, #262627);
+    color: var(--letters);
+    border: none;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    word-break: break-all;
+}
+.text__button:hover{
+    cursor: pointer;
+    color: rgb(245, 245, 245);
+    background-color:  rgb(6, 32, 65);
+    transition: 0.5s;
+    animation: subir 1.5s infinite;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.text-cod__button-copy{
+    width: 80%;
+    margin: 5px auto;
+    display: block;
+}
+.info{
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    background-color: #0c6d3e;
+    color: var(--letters);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.info.show{
+    opacity: 1;
+}
+.text-cod__modificado{
+    background: fixed;
+    color: var(--letters);
+    border: none;
+    font-size: 20px;
+    resize: none;
+    width: 100%;
+    height: 460px;
+}
+.text-cod__modificado:focus{
+    outline: none;
+}
+.text-cod__modificado::placeholder{
+    color: var(--letters);
+    font-size: 20px;
+}
+.attribution{
+    height: 100px;
+    width: 300px;
+    background: rgba(28, 28, 71, 0.548);
+    align-items: center;
+
+}
+.attribution a{
+    text-decoration: none;
+}
+.fot_log{
+    height: 30px;
+    width: 30px;
+}
+.notificacion {
+    width: 24%;
+    height: 10%;
+    font-size: smaller;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    right: 4%;
+    background-color: #171e20;
+    color: rgb(238, 243, 243);
+    padding: 14px 10px 10px 10px;
+    border: 2px solid #018673;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .notificacion.show {
+    opacity: 1;
+  }
+  
+  .notificacion .cerrar {
+    position: fixed;
+    top: 1.8rem;
+    right: 5%;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #1a1d1f;
+    color: #ffffff;
+    border: 2px solid #018673;
+    border-radius: 25%;
+    font-size: .8rem;
+    font-weight: 600;
+    line-height: 1.3rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .notificacion .texto {
+    padding-right: 2rem;
+    margin-left: 2rem;
+  }
+  
+  .notificacion .cerrar:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .close-button {
+    z-index: 1;
+  }
+  
+  .notificacion progress {
+    /* Le damos un ancho del 100% del contenedor */
+    width: 100%;
+    height: 10px;
+    /* Le quitamos el borde por defecto */
+    border: none;
+    /* Le damos un color de fondo gris claro */
+    background-color: #d3d3d3;
+  }
+  
+  /* Seleccionamos la parte interna de la barra de progreso */
+  .notificacion progress::-webkit-progress-value {
+    /* Le damos un color verde */
+    background-color: #018673;
+  }
+  
+  /* Seleccionamos la parte externa de la barra de progreso */
+  .notificacion progress::-webkit-progress-bar {
+    /* Le damos un color gris oscuro */
+    background-color: #1a2e35;
+  }
